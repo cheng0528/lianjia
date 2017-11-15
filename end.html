@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/end.css"/>
+		<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+					};
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>我想大声告诉你：</h1>
+			</header>
+			<section>
+				<h1>即便是失败，我也会用时间证明我对你是真的</h1>
+				<h1>你不用多好，我喜欢就好，我没有多好，请别嫌弃</h1>
+				<h1 style="margin-top: 6.3rem;">原谅我词穷，不能说出感动你的话</h1>
+				<h1>因为喜欢你，所有犯贱，因为喜欢你，所以无所谓伤害</h1>
+			</section>
+			<footer>
+				<h1 style="color: white; font-size: 40px; font-weight: bold;">❀久伴必定生情，我愿意等<span style="color: red;">(谢谢)</span></h1>
+			</footer>
+		</div>
+	</body>
+</html>

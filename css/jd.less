@@ -1,0 +1,258 @@
+@import url(m_style.css); //封装宽高及背景
+.full(@w, @h, @bg) {
+    width: @w;
+    height: @h;
+    background: @bg;
+}
+
+.box(@dq: horizontal) {
+    display: -webkit-box; //设置父元素为弹性盒布局
+    -webkit-box-orient: @dq; //将子元素的排列方式设置
+}
+
+.container,
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container {
+    .box(vertical);
+
+    
+    header {
+        
+          .full(100%,0.43rem,red);
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 99999;
+         background: rgba(0,0,0,0); 
+           
+        .txt {
+            margin-left: .1rem;
+            
+            .full(3.45rem,0.3rem,none);
+            border-radius: 1rem;
+            margin-left: 0.11rem;
+            margin-top: 0.06rem;
+            border: 1px solid red;
+            background: white;
+            text-indent: 5;
+//          background: url(../img/123456.jpg) no-repeat left center;
+        }
+        a{
+            display: block;
+            float: right;
+            font-size: 0.14rem;
+            margin-top: 0.11rem;
+            margin-right: 0.1rem;
+            color: white;
+            font-weight: bold;
+        }
+
+    }
+    section {
+        overflow: auto;
+        -webkit-box-flex: 1;
+        background: ##ffffff;
+        z-index: 0;
+        
+         .one {
+             
+            .swiper-container {
+                .swiper-wrapper {
+                    .swiper-slide {
+                         
+                        img {
+                             
+                            width: 100%;
+                            height: auto;
+                        }
+
+                    }
+                }
+            }
+        }
+        .box1{
+            .full(100%,1.58rem,#f3f3f3);
+           dl{
+               float: left;
+               width: 0.82rem;
+               height: 0.8rem;
+               text-align: center;
+//             border: 1px solid red;
+                -webkit-box-flex: 1;
+               dt{
+                   margin-top: 0.1rem;
+               }
+               dd{
+                   margin-top: 0.05rem;
+                   font-size: 0.12rem;
+               }
+               
+           }
+            
+        }
+        .box2{
+            .full(100%,auto,#f3f3f3);
+            img{
+                .full(100%,auto,none);
+            }
+            h1{
+                .full(4rem,0.35rem,#ffffff);
+                font-size: 0.1rem;
+                border: 1px solid #dcc1bd;
+                border-radius: .6rem;
+                margin-left: .1rem;
+                
+                a{
+                    display: block;
+                    float: left;
+                    margin-top: 0.1rem;
+                    font-size: 0.13rem;
+                }
+                img{
+                    .full(1rem,0.2rem,none);
+                    margin-left: .1rem;
+                    margin-top: 0.07rem;
+                    float:left ;
+                }
+                
+            }
+        }
+        .box3{
+            .full(100%,1.73rem,pink);
+            margin-top: 0.08rem;
+            .box3_1{
+                .full(100%,0.34rem,#ffffff);
+                h1{
+                    float: left;
+                    font-size: 0.14rem;
+                    margin-top: 0.1rem;
+                    margin-left: 0.08rem;
+                }
+                h2{
+                    float: left;
+                    font-size: .14rem;
+                    margin-top: 0.1rem;
+                    margin-left: 0.08rem;
+                }
+                button{
+                    float: left;
+                    margin-left: 0.06rem;
+                    margin-top: 0.1rem;
+                    .full(0.17rem,0.15rem,none);
+                    border: 2px solid #CCCCCC;
+                    background: white;
+                    font-size: .14rem;
+                }
+                a{
+                    font-size: .14rem;
+                    float: right;
+                    margin-top: 0.1rem;
+                    margin-right: 0.06rem;
+                    img{
+                        margin-left: 0.05rem;
+                    }
+                }
+            }
+            .box_2{
+                .full(100%,1.4rem,#ffffff);
+                dl{
+                    float: left;
+                    text-align: center;
+                    width: 1.3rem;
+                    height: 1.4rem;
+                    -webkit-box-flex: 1;
+                     dt{
+                            img{
+                                .full(1rem,1rem,none);
+                            }
+                        }
+                    dd{
+                       
+                        h1{
+                            font-size: .2rem;
+                            color: red;
+                        }
+                        del{
+                            font-size: 0.12rem;
+                            color: #CCCCCC;
+                        }
+                    }
+                }
+            }
+        }
+        .box4{
+            .full(100%,auto,none);
+            img{
+                .full(3.9rem,0.9rem,none);
+                margin-left: 0.07rem;
+            }
+        }
+        .box5{
+            .full(100%,1.52rem,yellow);
+            .box5_1{
+                .full(50%,1.52rem,blue);
+                float: left;
+            }
+        }
+    }
+    footer {
+        
+       // background: red;
+        .full(100%,auto,#ffffff);
+       // .box;
+       border-top:solid 1px #CCCCCC ;
+       a{
+           img{
+          .full(0.8rem,auto,none);
+           -webkit-box-flex: 1;
+           text-align: center;
+       }
+       }
+       
+        
+    }
+}
+.bug{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    .bug_in{
+        width: 600px;
+        height: 400px;
+        background: red;
+        margin-top: 600px;
+        margin-left: 90px;
+        opacity: 0.6;
+        position: relative;
+        .bug_in_in{
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            background: white;
+            opacity: 1;
+            h1{
+                text-align: center;
+                margin-top: 10px;
+                font-size: 26px;
+            }
+            h2{
+                text-align: center;
+            }
+            #input{
+               
+                
+            }
+        }
+    }
+}
